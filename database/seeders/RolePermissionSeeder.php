@@ -62,6 +62,7 @@ class RolePermissionSeeder extends Seeder
         $ketuaRt = Role::firstOrCreate(['name' => 'ketua_rt']);
         $ketuaRt->givePermissionTo([
             'dashboard.view_rt',
+            'keuangan_rt.view', 
             'warga.view', 'warga.create', 'warga.edit', 'warga.export',
             'keluarga.view', 'keluarga.create', 'keluarga.edit',
             'pengumuman.view', 'pengumuman.create', 'pengumuman.edit',
@@ -85,6 +86,7 @@ class RolePermissionSeeder extends Seeder
         $sekretaris = Role::firstOrCreate(['name' => 'sekretaris']);
         $sekretaris->givePermissionTo([
             'dashboard.view_rw',
+            'keuangan_rt.view', 
             'warga.view', 'warga.create', 'warga.edit', 'warga.export',
             'keluarga.view', 'keluarga.create', 'keluarga.edit', 'keluarga.export',
             'pengumuman.view', 'pengumuman.create', 'pengumuman.edit',
